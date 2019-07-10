@@ -1,0 +1,623 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* cq_pianifica_produzione_10
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-04-11 13:14+0000\n"
+"PO-Revision-Date: 2018-04-11 13:14+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: cq_pianifica_produzione_10
+#: selection:calcola.risorse,year:0
+msgid "2018"
+msgstr "2018"
+
+#. module: cq_pianifica_produzione_10
+#: selection:calcola.risorse,year:0
+msgid "2019"
+msgstr "2019"
+
+#. module: cq_pianifica_produzione_10
+#: selection:calcola.risorse,year:0
+msgid "2020"
+msgstr "2020"
+
+#. module: cq_pianifica_produzione_10
+#: selection:calcola.risorse,year:0
+msgid "2021"
+msgstr "2021"
+
+#. module: cq_pianifica_produzione_10
+#: selection:calcola.risorse,year:0
+msgid "2022"
+msgstr "2022"
+
+#. module: cq_pianifica_produzione_10
+#: selection:calcola.risorse,year:0
+msgid "2023"
+msgstr "2023"
+
+#. module: cq_pianifica_produzione_10
+#: selection:calcola.risorse,year:0
+msgid "2024"
+msgstr "2024"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.ui.view,arch_db:cq_pianifica_produzione_10.cq_pianificaz_produzione_form_view
+msgid "<span class=\"label label-danger\" attrs=\"{'invisible': ['|', ('availability', 'in', ('assigned', 'none')), ('state', 'not in', ('confirmed','progress'))]}\">Raw materials not available!</span>"
+msgstr "<span class=\"label label-danger\" attrs=\"{'invisible': ['|', ('availability', 'in', ('assigned', 'none')), ('state', 'not in', ('confirmed','progress'))]}\">Materie prime non disponibili!</span>"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_mrp_production_actual_duration
+msgid "Actual Duration (h)"
+msgstr "Durata reale (h)"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_mrp_production_appr_ut
+#: selection:mrp.production,appr_ut:0
+msgid "Approvato UT"
+msgstr "Approvato UT"
+
+#. module: cq_pianifica_produzione_10
+#: selection:mrp.production,appr_ut:0
+msgid "Approvato UT con modifiche"
+msgstr "Approvato UT con modifiche"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_tabella_risorse_ore_tot_available
+msgid "Available Hours/day"
+msgstr "Tot. ore/giorno"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.model,name:cq_pianifica_produzione_10.model_mrp_bom
+msgid "Bill of Material"
+msgstr "Distinta base"
+
+#. module: cq_pianifica_produzione_10
+#: selection:mrp.production,bloccato:0
+msgid "Blocco"
+msgstr "Blocco"
+
+#. module: cq_pianifica_produzione_10
+#: selection:mrp.production,bloccato:0
+msgid "Blocco commerciale"
+msgstr "Blocco commerciale"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.ui.view,arch_db:cq_pianifica_produzione_10.view_confirm_plan_calendar_form
+msgid "By clicking 'Confirm', the Manufacturing Calendar will be overwritten by the Planning Calendar!"
+msgstr "Cliccando 'Conferma', il calendario pianificato sostituisce quello di produzione!"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.actions.act_window,name:cq_pianifica_produzione_10.act_calcola_risorse_view
+#: model:ir.ui.menu,name:cq_pianifica_produzione_10.menu_act_calcola_risorse_view
+#: model:ir.ui.view,arch_db:cq_pianifica_produzione_10.view_calcola_risorse_form
+msgid "Calcola presenze"
+msgstr "Calcola presenze"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.ui.view,arch_db:cq_pianifica_produzione_10.view_calcola_risorse_form
+#: model:ir.ui.view,arch_db:cq_pianifica_produzione_10.view_confirm_plan_calendar_form
+#: model:ir.ui.view,arch_db:cq_pianifica_produzione_10.view_plan_mo_form
+msgid "Close"
+msgstr "Chiudi"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_mrp_production_carrello
+msgid "Codice carrello"
+msgstr "Codice carrello"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.ui.view,arch_db:cq_pianifica_produzione_10.view_calcola_risorse_form
+msgid "Compute"
+msgstr "Calcola"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.actions.act_window,name:cq_pianifica_produzione_10.act_plan_mo_view
+#: model:ir.ui.menu,name:cq_pianifica_produzione_10.menu_act_plan_mo_view
+#: model:ir.ui.view,arch_db:cq_pianifica_produzione_10.view_plan_mo_form
+msgid "Compute Planning Calendar"
+msgstr "Calcola la pianificazione"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.model,name:cq_pianifica_produzione_10.model_calcola_risorse
+msgid "Compute Workload"
+msgstr "Calcola le presenze"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.ui.view,arch_db:cq_pianifica_produzione_10.view_confirm_plan_calendar_form
+msgid "Confirm"
+msgstr "Conferma"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.model,name:cq_pianifica_produzione_10.model_conferma_pianifica_mo
+msgid "Confirm Manufacturing Order planning"
+msgstr "Conferma la pianificazione"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.actions.act_window,name:cq_pianifica_produzione_10.act_confirm_plan_calendar
+#: model:ir.ui.menu,name:cq_pianifica_produzione_10.menu_act_confirm_plan_calendar
+#: model:ir.ui.view,arch_db:cq_pianifica_produzione_10.view_confirm_plan_calendar_form
+msgid "Confirm Planning Calendar"
+msgstr "Conferma la pianificazione"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_mrp_production_contr_ut
+msgid "Controllo UT"
+msgstr "Controllo UT"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_mrp_production_corpo
+msgid "Corpo"
+msgstr "Corpo"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.actions.act_window,help:cq_pianifica_produzione_10.action_reparti
+msgid "Create manufacturing departments"
+msgstr "Crea i reparti di produzione"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_calcola_risorse_create_uid
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_conferma_pianifica_mo_create_uid
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_config_risorse_create_uid
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_pianifica_mo_create_uid
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_reparti_create_uid
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_tabella_risorse_create_uid
+msgid "Created by"
+msgstr "Creato da"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_calcola_risorse_create_date
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_conferma_pianifica_mo_create_date
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_config_risorse_create_date
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_pianifica_mo_create_date
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_reparti_create_date
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_tabella_risorse_create_date
+msgid "Created on"
+msgstr "Creato il"
+
+#. module: cq_pianifica_produzione_10
+#: selection:mrp.production,bloccato:0
+msgid "Da fare"
+msgstr "Da fare"
+
+#. module: cq_pianifica_produzione_10
+#: selection:mrp.production,bloccato:0
+msgid "Da imballare"
+msgstr "Da imballare"
+
+#. module: cq_pianifica_produzione_10
+#: selection:mrp.production,prelievo:0
+msgid "Da prelevare"
+msgstr "Da prelevare"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_tabella_risorse_data
+msgid "Date"
+msgstr "Data"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.ui.view,arch_db:cq_pianifica_produzione_10.cq_pianificaz_produzione_filter
+#: model:ir.ui.view,arch_db:cq_pianifica_produzione_10.view_mrp_production_filter_pianif
+msgid "Delivery Time"
+msgstr "Delivery Time"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_calcola_risorse_reparto_id
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_conferma_pianifica_mo_reparto_id
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_config_risorse_reparto_id
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_mrp_bom_reparto_id
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_mrp_production_reparto_id
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_pianifica_mo_reparto_id
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_product_category_reparto_id
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_tabella_risorse_reparto_id
+#: model:ir.ui.view,arch_db:cq_pianifica_produzione_10.cq_pianificaz_produzione_filter
+#: model:ir.ui.view,arch_db:cq_pianifica_produzione_10.view_mrp_production_filter_pianif
+msgid "Department"
+msgstr "Reparto"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.actions.act_window,name:cq_pianifica_produzione_10.action_reparti
+#: model:ir.ui.menu,name:cq_pianifica_produzione_10.menu_view_reparti
+#: model:ir.ui.view,arch_db:cq_pianifica_produzione_10.view_reparti_form
+#: model:ir.ui.view,arch_db:cq_pianifica_produzione_10.view_reparti_tree
+msgid "Departments"
+msgstr "Reparti"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_calcola_risorse_display_name
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_conferma_pianifica_mo_display_name
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_config_risorse_display_name
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_pianifica_mo_display_name
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_reparti_display_name
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_tabella_risorse_display_name
+msgid "Display Name"
+msgstr "Nome Visualizzato"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_config_risorse_inizio
+msgid "From"
+msgstr "Da"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.ui.view,arch_db:cq_pianifica_produzione_10.cq_pianificaz_produzione_filter
+msgid "Group By..."
+msgstr "Raggruppa per..."
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_config_risorse_ore_tot
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_tabella_risorse_ore_tot
+msgid "Hours/day"
+msgstr "Ore/giorno"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_config_risorse_ore_tot_available
+msgid "Hours/day available"
+msgstr "Ore/giorno disponibili"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_config_risorse_ore_res1
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_tabella_risorse_ore_res1
+msgid "Hours/day resource 1"
+msgstr "Ore/giorno risorsa 1"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_config_risorse_ore_res2
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_tabella_risorse_ore_res2
+msgid "Hours/day resource 2"
+msgstr "Ore/giorno risorsa 2"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_config_risorse_ore_res3
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_tabella_risorse_ore_res3
+msgid "Hours/day resource 3"
+msgstr "Ore/giorno risorsa 3"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_calcola_risorse_id
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_conferma_pianifica_mo_id
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_config_risorse_id
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_pianifica_mo_id
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_reparti_id
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_tabella_risorse_id
+msgid "ID"
+msgstr "ID"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.ui.view,arch_db:cq_pianifica_produzione_10.cq_pianificaz_produzione_filter
+msgid "In Production"
+msgstr "In Produzione"
+
+#. module: cq_pianifica_produzione_10
+#: selection:mrp.production,bloccato:0
+msgid "In assemblaggio"
+msgstr "In assemblaggio"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_pianifica_mo_inizializzazione
+msgid "Inizialization Date"
+msgstr "Data iniziale"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_calcola_risorse___last_update
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_conferma_pianifica_mo___last_update
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_config_risorse___last_update
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_pianifica_mo___last_update
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_reparti___last_update
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_tabella_risorse___last_update
+msgid "Last Modified on"
+msgstr "Ultima modifica il"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_calcola_risorse_write_uid
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_conferma_pianifica_mo_write_uid
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_config_risorse_write_uid
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_pianifica_mo_write_uid
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_reparti_write_uid
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_tabella_risorse_write_uid
+msgid "Last Updated by"
+msgstr "Ultima modifica di"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_calcola_risorse_write_date
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_conferma_pianifica_mo_write_date
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_config_risorse_write_date
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_pianifica_mo_write_date
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_reparti_write_date
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_tabella_risorse_write_date
+msgid "Last Updated on"
+msgstr "Ultima modifica il"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.ui.view,arch_db:cq_pianifica_produzione_10.cq_pianificaz_produzione_filter
+msgid "Late"
+msgstr "In ritardo"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.actions.act_window,name:cq_pianifica_produzione_10.cq_pianificaz_produzione_action
+#: model:ir.ui.menu,name:cq_pianifica_produzione_10.menu_cq_pianificaz_produzione_action
+msgid "MO Planning Calendar"
+msgstr "Calendario di pianificazione"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.model,name:cq_pianifica_produzione_10.model_mrp_production
+msgid "Manufacturing Order"
+msgstr "Ordine di Produzione"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.model,name:cq_pianifica_produzione_10.model_pianifica_mo
+msgid "Manufacturing Order planning"
+msgstr "Pianificazione della produzione"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.ui.view,arch_db:cq_pianifica_produzione_10.cq_normale_produzione_tree_view
+#: model:ir.ui.view,arch_db:cq_pianifica_produzione_10.cq_pianificaz_produzione_calendar
+#: model:ir.ui.view,arch_db:cq_pianifica_produzione_10.cq_pianificaz_produzione_tree_view
+msgid "Manufacturing Orders"
+msgstr "Ordini di produzione"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.ui.view,arch_db:cq_pianifica_produzione_10.cq_pianificaz_produzione_filter
+msgid "Manufacturing Orders which are currently in production."
+msgstr "Ordini attualmente in produzione"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.ui.view,arch_db:cq_pianifica_produzione_10.cq_pianificaz_produzione_filter
+msgid "Manufacturing Orders which are ready to start production."
+msgstr "MO pronti per la produzione."
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.ui.view,arch_db:cq_pianifica_produzione_10.cq_pianificaz_produzione_filter
+msgid "Manufacturing Orders which are waiting for raw materials."
+msgstr "MO in attesa di materiali."
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_reparti_name
+msgid "Name"
+msgstr "Nome"
+
+#. module: cq_pianifica_produzione_10
+#: selection:mrp.production,stampata:0
+msgid "No"
+msgstr "No"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.ui.view,arch_db:cq_pianifica_produzione_10.cq_pianificaz_produzione_filter
+msgid "Normal BOMS"
+msgstr "Distinte normali"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_mrp_production_note
+msgid "Note"
+msgstr "Nota"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_config_risorse_n_res1
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_tabella_risorse_n_res1
+msgid "Num. resource 1"
+msgstr "Num. risorse tipo 1"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_config_risorse_n_res2
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_tabella_risorse_n_res2
+msgid "Num. resource 2"
+msgstr "Num. risorse tipo 2"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_config_risorse_n_res3
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_tabella_risorse_n_res3
+msgid "Num. resource 3"
+msgstr "Num. risorse tipo 3"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_tabella_risorse_num_ordini
+msgid "Number of orders starting today"
+msgstr "Numero di ordini da iniziare oggi"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_mrp_production_num_res
+msgid "Number of resources (actual)"
+msgstr "Numero di risorse (reali)"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.ui.view,arch_db:cq_pianifica_produzione_10.cq_pianificaz_produzione_filter
+msgid "Pending"
+msgstr "In sospeso"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.ui.view,arch_db:cq_pianifica_produzione_10.view_plan_mo_form
+msgid "Plan"
+msgstr "Pianifica"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.ui.view,arch_db:cq_pianifica_produzione_10.cq_pianificaz_produzione_filter
+msgid "Planned Date"
+msgstr "Data pianificata"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_mrp_production_planned_duration
+msgid "Planned Duration (h)"
+msgstr "Durata prevista (h)"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_mrp_production_planned_end
+msgid "Planned End Date"
+msgstr "Fine pianificata"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_mrp_production_planned_start
+msgid "Planned Start Date"
+msgstr "Inizio pianificato"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.ui.view,arch_db:cq_pianifica_produzione_10.cq_pianificaz_produzione_filter
+msgid "Planned Week"
+msgstr "Settimana pianificata"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_mrp_production_planned_week
+msgid "Planned week"
+msgstr "Settimana pianificata"
+
+#. module: cq_pianifica_produzione_10
+#: selection:mrp.production,prelievo:0
+msgid "Prelevato"
+msgstr "Prelevato"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_mrp_production_prelievo
+msgid "Prelievo"
+msgstr "Prelievo"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.ui.view,arch_db:cq_pianifica_produzione_10.cq_pianificaz_produzione_filter
+msgid "Product"
+msgstr "Prodotto"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.model,name:cq_pianifica_produzione_10.model_product_category
+msgid "Product Category"
+msgstr "Categoria prodotto"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.ui.view,arch_db:cq_pianifica_produzione_10.cq_pianificaz_produzione_filter
+msgid "Production"
+msgstr "Produzione"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.ui.view,arch_db:cq_pianifica_produzione_10.cq_pianificaz_produzione_filter
+msgid "Production started late"
+msgstr "La produzione è iniziata in ritardo"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.ui.view,arch_db:cq_pianifica_produzione_10.cq_pianificaz_produzione_gantt
+msgid "Productions"
+msgstr "Produzioni"
+
+#. module: cq_pianifica_produzione_10
+#: selection:mrp.production,bloccato:0
+msgid "Pronto"
+msgstr "Pronto"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.ui.view,arch_db:cq_pianifica_produzione_10.cq_pianificaz_produzione_filter
+msgid "Ready"
+msgstr "Pronto"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.model,name:cq_pianifica_produzione_10.model_reparti
+msgid "Reparti di produzione"
+msgstr "Reparti di produzione"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.actions.act_window,name:cq_pianifica_produzione_10.action_config_risorse
+#: model:ir.ui.menu,name:cq_pianifica_produzione_10.menu_config_risorse
+#: model:ir.ui.view,arch_db:cq_pianifica_produzione_10.view_config_risorse_form
+#: model:ir.ui.view,arch_db:cq_pianifica_produzione_10.view_config_risorse_tree
+msgid "Risorse per dipartimento"
+msgstr "Risorse per reparto"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.actions.act_window,name:cq_pianifica_produzione_10.action_tabella_risorse
+#: model:ir.ui.menu,name:cq_pianifica_produzione_10.menu_tabella_risorse
+#: model:ir.ui.view,arch_db:cq_pianifica_produzione_10.view_tabella_risorse_form
+#: model:ir.ui.view,arch_db:cq_pianifica_produzione_10.view_tabella_risorse_tree
+msgid "Risorse per giorno"
+msgstr "Risorse per giorno"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.ui.view,arch_db:cq_pianifica_produzione_10.cq_pianificaz_produzione_filter
+msgid "Search Production"
+msgstr "Ricerca Produzione"
+
+#. module: cq_pianifica_produzione_10
+#: selection:mrp.production,stampata:0
+msgid "Si"
+msgstr "Si"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_mrp_production_stampata
+msgid "Stampata"
+msgstr "Stampata"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.ui.view,arch_db:cq_pianifica_produzione_10.view_mrp_production_filter_pianif
+msgid "Start Week"
+msgstr "Settimana di inizio"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_mrp_production_start_week
+msgid "Start week"
+msgstr "Settimana di inizio"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_mrp_production_bloccato
+msgid "Stato"
+msgstr "Stato"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.ui.view,arch_db:cq_pianifica_produzione_10.cq_pianificaz_produzione_filter
+msgid "Status"
+msgstr "Stato"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_mrp_production_tempo_pian
+msgid "Tempo pianificato per assemblare (h)"
+msgstr "Tempo pianificato per assemblare (h)"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_config_risorse_fine
+msgid "To"
+msgstr "A"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.ui.view,arch_db:cq_pianifica_produzione_10.cq_pianificaz_produzione_filter
+msgid "To do"
+msgstr "Cose da fare"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.ui.view,arch_db:cq_pianifica_produzione_10.cq_normale_produzione_tree_view
+#: model:ir.ui.view,arch_db:cq_pianifica_produzione_10.cq_pianificaz_produzione_tree_view
+msgid "Total Hours"
+msgstr "Ore totali"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.ui.view,arch_db:cq_pianifica_produzione_10.cq_normale_produzione_tree_view
+#: model:ir.ui.view,arch_db:cq_pianifica_produzione_10.cq_pianificaz_produzione_tree_view
+msgid "Total Qty"
+msgstr "Qtà totale"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.model,name:cq_pianifica_produzione_10.model_tabella_risorse
+msgid "Workload"
+msgstr "Carico di lavoro"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.model,name:cq_pianifica_produzione_10.model_config_risorse
+#: model:ir.ui.menu,name:cq_pianifica_produzione_10.menu_manage_risorse
+msgid "Workload Management"
+msgstr "Pianificazione produzione"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.model.fields,field_description:cq_pianifica_produzione_10.field_calcola_risorse_year
+msgid "Year"
+msgstr "Anno"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.model.fields,help:cq_pianifica_produzione_10.field_mrp_production_planned_duration
+msgid "calcolata dalle righe in secondi della diba o (se non ci sono) copiata da tempo pianificato per assemblare"
+msgstr "calcolata dalle righe in secondi della diba o (se non ci sono) copiata da tempo pianificato per assemblare"
+
+#. module: cq_pianifica_produzione_10
+#: model:ir.model.fields,help:cq_pianifica_produzione_10.field_mrp_production_actual_duration
+msgid "per poter inserire a posteriori le durate, fare statistiche e sistemare le durate delle distinte base"
+msgstr "per poter inserire a posteriori le durate, fare statistiche e sistemare le durate delle distinte base"
+

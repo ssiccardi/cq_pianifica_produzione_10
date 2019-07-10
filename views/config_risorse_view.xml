@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>    
+
+
+
+    <menuitem id="menu_manage_risorse" name="Workload Management" parent="mrp.menu_mrp_root" sequence="50"/>
+
+
+    <record id="view_config_risorse_tree" model="ir.ui.view">
+      <field name="name">config.risorse.tree</field>
+      <field name="model">config.risorse</field>
+      <field name="type">tree</field>
+      <field name="arch" type="xml">
+        <tree string="Risorse per dipartimento">
+             <field name="inizio" />
+             <field name="fine" />
+             <field name="n_res1" />            
+             <field name="ore_res1" />
+             <field name="n_res2" />
+             <field name="ore_res2" />
+             <field name="n_res3" />
+             <field name="ore_res3" />
+             <field name="ore_tot" />
+             <field name="reparto_id" required="1"/>                                       
+        </tree>
+      </field>
+    </record>
+
+
+    <record id="view_config_risorse_form" model="ir.ui.view">
+      <field name="name">config.risorse.form</field>
+      <field name="model">config.risorse</field>
+      <field name="type">form</field>
+      <field name="arch" type="xml">
+        <form string="Risorse per dipartimento" >
+          <group>
+             <field name="inizio" />
+             <field name="fine" />
+             <field name="n_res1" />            
+             <field name="ore_res1" />
+             <field name="n_res2" />
+             <field name="ore_res2" />
+             <field name="n_res3" />
+             <field name="ore_res3" />
+             <field name="ore_tot" /> 
+             <field name="reparto_id" required="1"/>
+          </group>
+        </form>
+      </field>
+    </record>
+
+    <record id="action_config_risorse" model="ir.actions.act_window">
+      <field name="name">Risorse per dipartimento</field>
+      <field name="res_model">config.risorse</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <menuitem action="action_config_risorse" id="menu_config_risorse" parent="menu_manage_risorse" sequence="10"/>
+
+    <record id="view_tabella_risorse_tree" model="ir.ui.view">
+      <field name="name">tabella.risorse.tree</field>
+      <field name="model">tabella.risorse</field>
+      <field name="type">tree</field>
+      <field name="arch" type="xml">
+        <tree string="Risorse per giorno">
+             <field name="data" />
+             <field name="n_res1" />            
+             <field name="ore_res1" />
+             <field name="n_res2" />
+             <field name="ore_res2" />
+             <field name="n_res3" />
+             <field name="ore_res3" />
+             <field name="ore_tot" />
+             <field name="reparto_id" />                                       
+        </tree>
+      </field>
+    </record>
+
+
+    <record id="view_tabella_risorse_form" model="ir.ui.view">
+      <field name="name">tabella.risorse.form</field>
+      <field name="model">tabella.risorse</field>
+      <field name="type">form</field>
+      <field name="arch" type="xml">
+        <form string="Risorse per giorno" >
+           <group>
+             <field name="data" />
+             <field name="reparto_id" />
+             <field name="n_res1" />            
+             <field name="ore_res1" />
+             <field name="n_res2" />
+             <field name="ore_res2" />
+             <field name="n_res3" />
+             <field name="ore_res3" />
+             <field name="ore_tot" /> 
+          </group>
+        </form>
+      </field>
+    </record>
+
+    <record id="action_tabella_risorse" model="ir.actions.act_window">
+      <field name="name">Risorse per giorno</field>
+      <field name="res_model">tabella.risorse</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <menuitem action="action_tabella_risorse" id="menu_tabella_risorse" parent="menu_manage_risorse" sequence="30"/>
+
+
+  </data>
+</odoo>

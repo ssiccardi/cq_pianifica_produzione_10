@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>    
+
+        <record id="view_reparti_tree" model="ir.ui.view">
+            <field name="name">view.reparti.tree</field>
+            <field name="model">reparti</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">               
+                <tree string="Departments">
+                   <field name="name" required="1" />
+                </tree>
+            </field>
+        </record>        
+        
+    
+        <record id="view_reparti_form" model="ir.ui.view">
+            <field name="name">view.reparti.form</field>
+            <field name="model">reparti</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">               
+                <form string="Departments" >
+                  <group>
+                   <field name="name" required="1" />
+                  </group>
+                </form>
+            </field>
+        </record>
+        
+
+        <record id="action_reparti" model="ir.actions.act_window">
+            <field name="name">Departments</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">reparti</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>            
+            <field name="help">Create manufacturing departments</field>
+        </record>
+
+        <menuitem
+        action="action_reparti"
+        id="menu_view_reparti"
+        parent="menu_manage_risorse" sequence="5"/>
+
+			
+	</data>
+</openerp>

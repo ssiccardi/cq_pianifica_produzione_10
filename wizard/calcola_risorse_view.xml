@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>    
+
+
+
+
+    <record id="view_calcola_risorse_form" model="ir.ui.view">
+      <field name="name">calcola.risorse.form</field>
+      <field name="model">calcola.risorse</field>
+      <field name="type">form</field>
+      <field name="arch" type="xml">
+        <form string="Calcola presenze">
+          <group col="4" colspan="4">
+                <field name="year" />
+                <field name="reparto_id" />                 
+             <newline/>
+             <footer>
+                <button string="Close" special="cancel"/>
+                <button name="compute_workload" string="Compute" type="object" />       
+             </footer>           
+          </group>   
+        </form>
+      </field>
+    </record>
+
+        <act_window
+        id="act_calcola_risorse_view"
+        res_model="calcola.risorse"
+        name="Calcola presenze"
+        view_type="form"
+        view_mode="form" 
+        target="new"/>
+
+    <menuitem action="act_calcola_risorse_view" id="menu_act_calcola_risorse_view" parent="menu_manage_risorse" sequence="20"/>
+
+
+	</data>
+</openerp>

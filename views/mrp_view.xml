@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>    
+
+        <record id="mrp_bom_reparti_form" model="ir.ui.view">
+		    <field name="name">mrp.bom.reparti.form</field>
+			<field name="model">mrp.bom</field>
+			<field name="inherit_id" ref="mrp.mrp_bom_form_view"/>
+		    <field name="arch" type="xml">           
+              <field name="type" position="after">
+              <field name="reparto_id" options="{'no_create': True}"/>
+              </field>            
+            </field>
+        </record>        
+
+
+        <record id="mrp_bom_reparti_tree" model="ir.ui.view">
+		    <field name="name">mrp.bom.reparti.tree</field>
+			<field name="model">mrp.bom</field>
+			<field name="inherit_id" ref="mrp.mrp_bom_tree_view"/>
+		    <field name="arch" type="xml">            
+              <field name="code" position="after">
+              <field name="reparto_id"/>
+              </field>            
+            </field>
+        </record> 
+
+
+        <record id="mrp_production_reparti_form" model="ir.ui.view">
+		    <field name="name">mrp.production.reparti.form</field>
+			<field name="model">mrp.production</field>
+			<field name="inherit_id" ref="mrp.mrp_production_form_view"/>
+		    <field name="arch" type="xml">            
+              <field name="bom_id" position="after">
+              <field name="reparto_id" options="{'no_create': True}"/>
+              <field name="bloccato"/>
+              <field name="prelievo"/>
+              <field name="tempo_pian"/>
+              <field name="actual_duration"/>
+              <field name="stampata"/>
+              </field>
+              <field name="origin" position="after">
+              <field name="carrello"/>
+              <field name="note"/>
+              <field name="corpo"/>
+              <field name="contr_ut"/>
+              <field name="appr_ut"/>
+              </field>
+            </field>
+        </record> 
+
+        <record id="prod_categ_reparti_form" model="ir.ui.view">
+		    <field name="name">prod.categ.reparti.form</field>
+			<field name="model">product.category</field>
+			<field name="inherit_id" ref="product.product_category_form_view"/>
+		    <field name="arch" type="xml">           
+              <field name="type" position="after">
+              <field name="reparto_id" options="{'no_create': True}"/>
+              </field>            
+            </field>
+        </record>        
+
+
+			
+	</data>
+</openerp>

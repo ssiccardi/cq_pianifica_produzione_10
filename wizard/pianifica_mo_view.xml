@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>    
+
+
+        <!--
+        Production Management
+        -->
+
+        <record id="cq_normale_produzione_tree_view" model="ir.ui.view">
+            <field name="name">cq.normale.production.tree</field>
+            <field name="model">mrp.production</field>
+            <!-- <field name="mode">primary</field> -->
+            <field eval="10" name="priority"/>  
+            <field name="arch" type="xml">
+                <tree default_order='date_planned_start desc' fonts="bold:message_unread==True" colors="orange:bloccato in ('todo');blue:bloccato in ('running');purple:bloccato in ('blcomm');green:bloccato in ('ready');red:bloccato in ('blocco');saddlebrown:bloccato in ('topack') " string="Manufacturing Orders">
+                    <field name="message_unread" invisible="1"/>
+                    <field name="name"/>
+                    <field name="carrello"/>
+                    <field name="cliente"/>
+                    <field name="origin"/>
+                    <field name="product_id"/>
+                    <field name="product_qty" sum="Total Qty"/>
+                    <field name="tempo_pian"/>
+                    <field name="planned_duration" sum="Total Hours"/>
+<!--                    <field name="actual_duration" sum="Total Hours"/>  -->
+<!--                    <field name="product_uom_id" groups="product.group_uom"/>
+                    <field name="valore"/>  -->
+                    <field name="delivery_time"/>
+                    <field name="date_planned_start"/>
+                    <field name="bloccato"/>
+                    <field name="prelievo"/>
+                    <!--<field name="routing_id" groups="mrp.group_mrp_routings"/>
+                    <field name="hour_total" sum="Total Hours"/>
+                    <field name="cycle_total" sum="Total Cycles"/>-->
+                    <field name="state"/>
+                    <field name="stampata"/>
+                    <field name="corpo"/>
+                    <field name="contr_ut"/>
+                    <field name="appr_ut"/>
+                    <field name="note"/>
+                    <field name="reparto_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="cq_pianificaz_produzione_tree_view" model="ir.ui.view">
+            <field name="name">cq.pianifica.production.tree</field>
+            <field name="model">mrp.production</field>
+            <field name="mode">primary</field>
+            <!-- <field eval="77" name="priority"/>  -->
+            <field name="arch" type="xml">
+                <tree default_order='planned_start desc' fonts="bold:message_unread==True" colors="orange:bloccato in ('todo');blue:bloccato in ('running');purple:bloccato in ('blcomm');green:bloccato in ('ready');red:bloccato in ('blocco');saddlebrown:bloccato in ('topack') " string="Manufacturing Orders">
+                    <field name="message_unread" invisible="1"/>
+                    <field name="name"/>
+                    <field name="carrello"/>
+                    <field name="cliente"/>
+                    <field name="origin"/>
+                    <field name="product_id"/>
+                    <field name="product_qty" sum="Total Qty"/>
+                    <field name="tempo_pian"/>
+                    <field name="planned_duration" sum="Total Hours"/>
+<!--                    <field name="actual_duration" sum="Total Hours"/>  -->
+<!--                    <field name="product_uom_id" groups="product.group_uom"/>
+                    <field name="valore"/>  -->
+                    <field name="delivery_time"/>
+                    <field name="planned_start"/>
+                    <field name="bloccato"/>
+                    <field name="prelievo"/>
+                    <!--<field name="routing_id" groups="mrp.group_mrp_routings"/>
+                    <field name="hour_total" sum="Total Hours"/>
+                    <field name="cycle_total" sum="Total Cycles"/>-->
+                    <field name="state"/>
+                    <field name="stampata"/>
+                    <field name="corpo"/>
+                    <field name="contr_ut"/>
+                    <field name="appr_ut"/>
+                    <field name="note"/>
+                    <field name="reparto_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="cq_pianificaz_produzione_calendar" model="ir.ui.view">
+            <field name="name">cq.pianifica.production.calendar</field>
+            <field name="model">mrp.production</field>
+            <field eval="20" name="priority"/>
+            <field name="arch" type="xml">
+                <calendar color="reparto_id" date_start="planned_start" date_stop="planned_end" string="Manufacturing Orders" mode="day">
+<!--                    <field name="name"/>
+                    <field name="product_id"/>  -->
+                    <field name="cliente"/>
+                    <field name="carrello"/>
+                    <field name="product_qty"/>
+                </calendar>
+            </field>
+        </record>
+
+        <record id="cq_normale_produzione_calendar" model="ir.ui.view">
+            <field name="name">cq.normale.production.calendar</field>
+            <field name="model">mrp.production</field>
+            <field name="inherit_id" ref="mrp.view_production_calendar"/>
+            <field name="arch" type="xml">
+                <xpath expr="//calendar" position="attributes">
+                   <attribute name="color">reparto_id</attribute>
+                </xpath>
+                <field name="name" position="replace">
+                </field>
+                <field name="product_id" position="replace">
+                </field>
+                <field name="product_qty" position="before">
+                    <field name="cliente"/>
+                    <field name="carrello"/>
+                </field>
+            </field>
+        </record>
+
+
+       <record id="cq_pianificaz_produzione_gantt" model="ir.ui.view">
+            <field name="name">cq.pianificaz.produzione.gantt</field>
+            <field name="model">mrp.production</field>
+            <field name="arch" type="xml">
+                <gantt date_start="planned_start" date_stop="planned_end" string="Productions" default_group_by="reparto_id">
+                </gantt>
+            </field>
+        </record>
+
+
+        <!-- <record model="ir.ui.view" id="cq_pianificaz_produzione_graph">
+            <field name="name">mrp.production.graph</field>
+            <field name="model">mrp.production</field>
+            <field name="arch" type="xml">
+                <graph string="Manufacturing Orders" type="bar">
+                    <field name="date_planned"/>
+                    <field name="hour_total" operator="+"/>
+                    <field name="cycle_total" operator="+"/>
+                </graph>
+            </field>
+        </record>-->
+
+        <record id="cq_pianificaz_produzione_form_view" model="ir.ui.view">
+            <field name="name">cq.pianifica.production.form</field>
+            <field name="model">mrp.production</field>
+            <field name="mode">primary</field>
+            <field eval="77" name="priority"/>
+            <field name="inherit_id" ref="mrp.mrp_production_form_view"/>
+            <field name="arch" type="xml">
+              <header position="replace">
+                 <header>
+                    <span class="label label-danger" attrs="{'invisible': ['|', ('availability', 'in', ('assigned', 'none')), ('state', 'not in', ('confirmed','progress'))]}">Raw materials not available!</span>
+                    <field name="state" widget="statusbar" statusbar_visible="confirmed,progress,done"/>
+                 </header>
+              </header>
+              <field name="delivery_time" position="after">
+                            <field name="planned_start"/>
+                            <field name="planned_end"/>
+                            <field name="planned_duration" readonly="1"/>
+              </field>
+            </field>
+        </record>
+
+        <record id="cq_pianificaz_produzione_filter" model="ir.ui.view">
+            <field name="name">cq.pianifica.production.select</field>
+            <field name="model">mrp.production</field>
+            <field name="arch" type="xml">
+                <search string="Search Production">
+                    <field name="name" string="Production" filter_domain="['|',('name','ilike',self),('origin','ilike',self)]"/>
+                    <filter icon="terp-gtk-media-pause" string="To do" name="todo" domain="[('state','in',('confirmed','ready'))]"
+                        help="Manufacturing Orders which are waiting for raw materials."/>
+                    <filter icon="terp-gtk-media-pause" string="Pending" name="pending" domain="[('state','=','confirmed')]"
+                        help="Manufacturing Orders which are waiting for raw materials."/>
+                    <filter icon="terp-camera_test" string="Ready" name="ready" domain="[('state','=','ready')]"
+                        help="Manufacturing Orders which are ready to start production."/>
+                    <filter icon="terp-check" string="In Production" name="inprogress" domain="[('state','=','in_production')]"
+                        help="Manufacturing Orders which are currently in production."/>
+                    <separator/>
+                    <filter icon="terp-gnome-cpu-frequency-applet+" string="Late" domain="['&amp;', ('date_planned_start','&lt;', current_date), ('state', 'in', ('draft', 'confirmed', 'ready'))]"
+                        help="Production started late"/>
+                    <field name="product_id"/>
+                    <field name="reparto_id"/>
+                    <filter icon="terp-check" string="Normal BOMS" name="boms" domain="[('bom_id.type','=','normal')]" />
+                    <group expand="0" string="Group By...">
+                        <filter string="Product" domain="[]" context="{'group_by':'product_id'}"/>
+                        <filter string="Department"  domain="[]" context="{'group_by':'reparto_id'}"/>
+                        <filter string="Status" domain="[]" context="{'group_by':'state'}"/>
+                        <filter string="Planned Date"  domain="[]" context="{'group_by':'planned_start'}"/>
+                        <filter string="Planned Week"  domain="[]" context="{'group_by':'planned_week'}"/>
+                        <filter string="Delivery Time"  domain="[]" context="{'group_by':'delivery_time'}"/>
+                    </group>
+               </search>
+            </field>
+        </record>
+
+<!-- sostituisce la vista originale di mrp -->
+        <record id="view_mrp_production_filter_pianif" model="ir.ui.view">
+            <field name="name">mrp.production.select.pianif</field>
+            <field name="model">mrp.production</field>
+            <field name="inherit_id" ref="mrp.view_mrp_production_filter"/>
+            <field name="arch" type="xml">
+                 <filter context="{'group_by':'routing_id'}" position="replace">
+                        <filter string="Department"  domain="[]" context="{'group_by':'reparto_id'}"/>
+                        <filter string="Start Week"  domain="[]" context="{'group_by':'start_week'}"/>
+                        <filter string="Delivery Time"  domain="[]" context="{'group_by':'delivery_time'}"/>
+                 </filter>
+            </field>
+        </record>
+
+
+        <record id="cq_pianificaz_produzione_action" model="ir.actions.act_window">
+            <field name="name">MO Planning Calendar</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">mrp.production</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">calendar,gantt,tree,form</field>
+            <field name="domain">[('state','not in',['done','cancel'])]</field>
+            <field name="search_view_id" ref="cq_pianificaz_produzione_filter"/>
+        </record>
+        <menuitem action="cq_pianificaz_produzione_action" id="menu_cq_pianificaz_produzione_action"
+            parent="menu_manage_risorse" sequence="260"/>
+
+<record model="ir.actions.act_window.view" id="cq_pianificaz_produzione_action_calendar">
+    <field eval="1" name="sequence"/>
+    <field name="view_mode">calendar</field>
+    <field name="view_id" ref="cq_pianificaz_produzione_calendar"/>
+    <field name="act_window_id" ref="cq_pianificaz_produzione_action"/>
+</record>
+
+<record model="ir.actions.act_window.view" id="cq_pianificaz_produzione_action_gantt">
+    <field eval="2" name="sequence"/>
+    <field name="view_mode">gantt</field>
+    <field name="view_id" ref="cq_pianificaz_produzione_gantt"/>
+    <field name="act_window_id" ref="cq_pianificaz_produzione_action"/>
+</record>
+
+<record model="ir.actions.act_window.view" id="cq_pianificaz_produzione_action_tree">
+    <field eval="3" name="sequence"/>
+    <field name="view_mode">tree</field>
+    <field name="view_id" ref="cq_pianificaz_produzione_tree_view"/>
+    <field name="act_window_id" ref="cq_pianificaz_produzione_action"/>
+</record>
+
+<record model="ir.actions.act_window.view" id="cq_pianificaz_produzione_action_form">
+    <field eval="2" name="sequence"/>
+    <field name="view_mode">form</field>
+    <field name="view_id" ref="cq_pianificaz_produzione_form_view"/>
+    <field name="act_window_id" ref="cq_pianificaz_produzione_action"/>
+</record>
+
+
+
+    <record id="view_plan_mo_form" model="ir.ui.view">
+      <field name="name">plan.mo.form</field>
+      <field name="model">pianifica.mo</field>
+      <field name="type">form</field>
+      <field name="arch" type="xml">
+        <form string="Compute Planning Calendar">
+          <group col="4" colspan="4">
+                <field name="inizializzazione" />
+                <field name="reparto_id" />
+             <newline/>
+             <footer>
+                <button string="Close" special="cancel" />
+                <button name="plan_mo"  string="Plan" type="object" />
+             </footer>          
+          </group>   
+        </form>
+      </field>
+    </record>
+
+        <act_window
+        id="act_plan_mo_view"
+        res_model="pianifica.mo"
+        name="Compute Planning Calendar"
+        view_type="form"
+        view_mode="form" 
+        target="new"/>
+
+    <menuitem action="act_plan_mo_view" id="menu_act_plan_mo_view" parent="menu_manage_risorse" sequence="250"/>
+
+
+
+
+
+    <record id="view_confirm_plan_calendar_form" model="ir.ui.view">
+      <field name="name">confirm.plan.calendar.form</field>
+      <field name="model">conferma.pianifica.mo</field>
+      <field name="type">form</field>
+      <field name="arch" type="xml">
+        <form string="Confirm Planning Calendar">
+          <group colspan="4" col="4" >
+             <field name="reparto_id" required="1"/>
+             <newline/>
+             <label colspan="4" width="300" string="By clicking 'Confirm', the Manufacturing Calendar will be overwritten by the Planning Calendar!"/>
+          </group>  
+             <newline/>
+             <footer>
+                <button string="Close" special="cancel" />
+                <button name="confirm_plan_mo" string="Confirm" type="object" />
+             </footer>          
+   
+        </form>
+      </field>
+    </record>
+
+    <act_window
+        id="act_confirm_plan_calendar"
+        res_model="conferma.pianifica.mo"
+        name="Confirm Planning Calendar"
+        view_type="form"
+        view_mode="form" 
+        target="new"/>
+
+    <menuitem action="act_confirm_plan_calendar" id="menu_act_confirm_plan_calendar" parent="menu_manage_risorse" sequence="270"/>
+
+
+
+	</data>
+</openerp>
